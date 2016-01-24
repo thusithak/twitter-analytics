@@ -6,11 +6,7 @@
 
 $(document).ready(function () {
 
-    var cardHeight = $(".card.hovercard").height();
-    var addCandiBtnHeight = $(".menu-btn").height();
-    $(".candidate-container").height($(".card.hovercard").height());
-    $(".menu-btn").height(cardHeight);
-    $(".menu-btn").css("padding-top", cardHeight / 2 - 50);
+
     var avatar = $(".avatar");
     avatar.each(function (i, e) {
         var profilePic = $(e).children("img").prop("src");
@@ -68,6 +64,11 @@ $(document).ready(function () {
                 loadIcon: "fw-fan",
                 loadAnimation: "fw-spin",
             });
+        },
+        error:function (xhr, ajaxOptions, thrownError){
+            if(xhr.status==404) {
+                console.log(thrownError);
+            }
         }
     }).done(function (data) {
         $(".trend-graph").loading({
@@ -88,6 +89,11 @@ $(document).ready(function () {
                 loadIcon: "fw-fan",
                 loadAnimation: "fw-spin",
             });
+        },
+        error:function (xhr, ajaxOptions, thrownError){
+            if(xhr.status==404) {
+                console.log(thrownError);
+            }
         }
     }).done(function (data) {
         $(".sentiment-graph").loading({
@@ -98,7 +104,12 @@ $(document).ready(function () {
     });
 
 
+    var cardHeight = $(".card").outerHeight(true);
+    $(".menu-btn").outerHeight(cardHeight);
+    $(".menu-btn").css("padding-top", cardHeight / 2 - 50);
+
 });
+
 
 
 

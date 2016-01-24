@@ -74,6 +74,7 @@ footer a, footer a:hover,footer .icon{
 
 .card {
     margin: 0px;
+    min-height:407px;
     background-color: rgba(214, 224, 226, 0.2);
     border-top-width: 0;
     border-bottom-width: 2px;
@@ -442,8 +443,7 @@ footer a, footer a:hover,footer .icon{
     float: left;
     
 }
-.candidate-container{
-    min-height: 407px;
+.candidate-container .menu-btn{
     border: 2px dashed #607D8B;
 }
 
