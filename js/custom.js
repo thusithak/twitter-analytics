@@ -1,0 +1,135 @@
+/* 
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+$(document).ready(function () {
+
+    var cardHeight = $(".card.hovercard").height();
+    var addCandiBtnHeight = $(".menu-btn").height();
+    $(".candidate-container").height($(".card.hovercard").height());
+    $(".menu-btn").height(cardHeight);
+    $(".menu-btn").css("padding-top", cardHeight / 2 - 50);
+    var avatar = $(".avatar");
+    avatar.each(function (i, e) {
+        var profilePic = $(e).children("img").prop("src");
+        $(e).prev().css("background", "url(" + profilePic + ")");
+    });
+
+    $(avatar).prev().foggy({
+        blurRadius: 16, // In pixels.
+        opacity: 1, // Falls back to a filter for IE.
+        cssFilterSupport: true  // Use "-webkit-filter" where available.
+    });
+
+
+    var nt_example1 = $('#nt-example1').newsTicker({
+        row_height: 80,
+        max_rows: 4,
+        duration: 2000,
+        prevButton: $('#nt-example1-prev'),
+        nextButton: $('#nt-example1-next')
+    });
+
+    $("#candidate-selection-menu li").on("click", function () {
+        var selectedCandidate = $(this).prop("id");
+
+        $.ajax({
+            url: "some/url/i/fancy",
+            context: document.body,
+            beforeSend: function () {
+                $(".candidate-container").loading({
+                    action: "show",
+                    element: ".candidate-container",
+                    loadingText: "Fetching Data..."
+                });
+            }
+        }).done(function (data) {
+            $(".candidate-container").loading({
+                action: "hide"
+            });
+            $(".site-overlay").click();
+            //console.log(data);
+        }).fail(function () {
+
+        });
+    });
+
+
+    $.ajax({
+        url: "some/url/i/fancy",
+        context: document.body,
+        beforeSend: function () {
+            $(".trend-graph").loading({
+                action: "show",
+                element: ".trend-graph",
+                loadingText: "Fetching Analytics Data...",
+                loadIcon: "fw-fan",
+                loadAnimation: "fw-spin",
+            });
+        }
+    }).done(function (data) {
+        $(".trend-graph").loading({
+            action: "hide"
+        });
+    }).fail(function () {
+
+    });
+    
+    $.ajax({
+        url: "some/url/i/fancy",
+        context: document.body,
+        beforeSend: function () {
+            $(".sentiment-graph").loading({
+                action: "show",
+                element: ".sentiment-graph",
+                loadingText: "Fetching Analytics Data...",
+                loadIcon: "fw-fan",
+                loadAnimation: "fw-spin",
+            });
+        }
+    }).done(function (data) {
+        $(".sentiment-graph").loading({
+            action: "hide"
+        });
+    }).fail(function () {
+
+    });
+
+
+});
+
+
+
+(function ($) {
+    /* ========================================================================
+     * pre-loader function
+     * ======================================================================== */
+    $.fn.loading = function (options) {
+        var settings = $.extend({
+            // defaults.
+            action: "show",
+            element: "",
+            loadIcon: "fw-wso2-logo",
+            loadAnimation: "fw-pulse",
+            loadingText: "Fetching Data..."
+        }, options);
+        var loaderString = '<div class="loader-wrapper text-center"><i class="icon fw '+settings.loadIcon +' '+settings.loadAnimation+'"></i><br/><span>'+settings.loadingText+'</span><div>';
+        var loaderHeight = $(this).height();
+
+        return $(this).each(function () {
+            if (settings.action === 'show') {
+                $(this).children().hide();
+                $(this).prepend(loaderString).addClass('loading');
+                $(".loader-wrapper").height(loaderHeight);
+                $(".loader-wrapper").css("padding-top", loaderHeight / 2 - 50);
+            }
+            if (settings.action === 'hide') {
+                $(this).children().show();
+                $(".loader-wrapper").remove();
+            }
+        });
+
+    };
+}(jQuery));
