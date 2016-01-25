@@ -6,22 +6,8 @@
 
 $(document).ready(function () {
 
-/*
-    var avatar = $(".avatar");
-    avatar.each(function (i, e) {
-        var profilePic = $(e).children("img").prop("src");
-        $(e).prev().css("background", "url(" + profilePic + ")");
-    });
-
-    $(avatar).prev().foggy({
-        blurRadius: 8, // In pixels.
-        opacity: 1, // Falls back to a filter for IE.
-        cssFilterSupport: true  // Use "-webkit-filter" where available.
-    });
-*/
-
     var ntLatest = $('#nt-latest').newsTicker({
-        row_height: 60,
+        row_height: 80,
         max_rows: 5,
         duration: 2000,
         prevButton: $('.nt-prev'),
@@ -29,7 +15,7 @@ $(document).ready(function () {
     });
 
     var ntPopular = $('#nt-popular').newsTicker({
-        row_height: 60,
+        row_height: 80,
         max_rows: 5,
         duration: 10000,
         prevButton: $('.nt-prev'),
@@ -37,7 +23,7 @@ $(document).ready(function () {
     });
 
     var ntNews = $('#nt-news').newsTicker({
-        row_height: 60,
+        row_height: 80,
         max_rows: 5,
         duration: 10000,
         prevButton: $('.nt-prev'),

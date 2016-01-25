@@ -4,11 +4,6 @@
  * For details, see http://www.apache.org/licenses/LICENSE-2.0.
  */
 
-/*
-colors: 
-#CFD8DC
-#607D8B
-*/
 
 body {
     padding-top: 0px;/* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
@@ -56,7 +51,7 @@ h3,a{
     border-bottom-color:transparent;
 }
 .nav-tabs>li>a:hover{
-    background-color:#CFD8DC;
+    background-color:#f4f4f4;
 }
 
 
@@ -86,11 +81,7 @@ footer a, footer a:hover,footer .icon{
     padding-bottom: 5em;
 }
 .trend-graph,.sentiment-graph{
-    height: 380px;
-    border: 2px solid #607D8B;
-    -webkit-box-shadow: 0px 4px 6px 0px rgba(189,189,189,0.5);
-    -moz-box-shadow: 0px 4px 6px 0px rgba(189,189,189,0.5);
-    box-shadow: 0px 4px 6px 0px rgba(189,189,189,0.5);
+    height: 500px;
 }
 
 
@@ -253,15 +244,11 @@ footer a, footer a:hover,footer .icon{
     box-sizing: border-box;
 }
 .card.hovercard {
-    background: #fff;
+    background: #f7f7f7;
     position: relative;
     padding-top: 0;
     overflow: hidden;
     text-align: center;
-    border: 2px solid #607D8B;
-    -webkit-box-shadow: 0px 4px 6px 0px rgba(189,189,189,0.5);
-    -moz-box-shadow: 0px 4px 6px 0px rgba(189,189,189,0.5);
-    box-shadow: 0px 4px 6px 0px rgba(189,189,189,0.5);
 }
 .card.hovercard .cardheader {
     height: 200px;
@@ -310,7 +297,7 @@ footer a, footer a:hover,footer .icon{
     display: inline-block;
     padding: 0px 6px;
     margin-bottom: 5px;
-    color: #607D8B;
+    color: #4aa3df;
 }
 .card.hovercard .info .desc span::before{
     content: "#";
@@ -352,14 +339,14 @@ footer a, footer a:hover,footer .icon{
 #nt-latest ul,#nt-popular ul,#nt-news ul{
     padding: 0px;
 }
-#nt-latest li,#nt-popular li,#nt-news li {
+#nt-latest li,#nt-popular li,#nt-news li{
     overflow: hidden;
-    height: 60px;
-    padding: 4px;
+    height: 80px;
+    padding: 8px;
     list-style: none;
-    font-size: 12px;
+    font-size: 14px;
     text-align: left;
-    border-bottom: 1px dashed #607D8B;
+    border-top: 1px solid #efefef;
     -webkit-transition-property: background,color;
     -moz-transition-property: background,color;
     -o-transition-property: background,color;
@@ -374,13 +361,13 @@ footer a, footer a:hover,footer .icon{
     transition-timing-function: linear;
 }
 #nt-latest li:first-child ,#nt-popular li:first-child,#nt-news li:first-child{
-    border-top: 1px dashed #607D8B;
+    border-top: 1px solid #fefefe;
 }
 #nt-latest li:hover,#nt-popular li:hover,#nt-news li:hover{
-    background: #CFD8DC;
+    background: #f4f4f4;
 }
 #nt-latest li a,#nt-popular li a,#nt-news li a{
-    color: #607D8B;
+    color: #4aa3df;
 }
 
 
@@ -393,10 +380,10 @@ footer a, footer a:hover,footer .icon{
     -moz-transition-property: background;
     -o-transition-property: background;
     transition-property: background;
-    -webkit-transition-duration: .5s;
-    -moz-transition-duration: .5s;
-    -o-transition-duration: .5s;
-    transition-duration: .5s;
+    -webkit-transition-duration: .2s;
+    -moz-transition-duration: .2s;
+    -o-transition-duration: .2s;
+    transition-duration: .2s;
     -webkit-transition-timing-function: linear;
     -moz-transition-timing-function: linear;
     -o-transition-timing-function: linear;
@@ -404,16 +391,20 @@ footer a, footer a:hover,footer .icon{
 }
 .menu-btn i,.loading i{
     font-size: 48px;
-    color: #607D8B;
+    color: #16a085;
     clear: both;
     
 }
 .menu-btn span,.loading span{
+    color:#ccc;
     display: block;
     padding-top: 10px;
 }
 .menu-btn:hover{
-    background: #CFD8DC;
+    background: #16a085;
+}
+.menu-btn:hover i,.menu-btn:hover span{
+    color:#fff;
 }
 .pushy.pushy-open ul{
     padding: 0px;
@@ -443,7 +434,7 @@ footer a, footer a:hover,footer .icon{
 }
 .pushy.pushy-open li:hover{
     cursor: pointer;
-    background: #CFD8DC;
+    background: #16a085;
 }
 .pushy.pushy-open li img{
     max-height: 100px;
@@ -459,6 +450,9 @@ footer a, footer a:hover,footer .icon{
 .pushy.pushy-open li:hover img{
     opacity:1;
 }
+.pushy.pushy-open li:hover span{
+    color:#fff;
+}
 .pushy.pushy-open li span{
     font-size: 20px;
     margin-top: 12%;
@@ -468,10 +462,9 @@ footer a, footer a:hover,footer .icon{
     float: left;
     
 }
-.candidate-container .menu-btn{
-    border: 2px dashed #607D8B;
+.candidate-container .menu-btn,.candidate-container .loader-wrapper{
+    border: 2px dashed #16a085;
 }
-
 .img-breaker{
     margin-bottom: 40px;
 }
