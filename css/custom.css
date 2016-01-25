@@ -326,6 +326,9 @@ footer a, footer a:hover,footer .icon{
     margin: 0px;
     padding: 0px;
 }
+#nt-news{
+    padding-top:40px;
+}
 .nt-container {
     text-align: center;
 }
