@@ -15,6 +15,10 @@ body {
     overflow-x: hidden;
     height: 100%;
 }
+.color1{ background:#f39c12; }
+.color2{ background:#8e44ad; }
+.color3{ background:#16a085; }
+
 .loading{
     position: static;
 }

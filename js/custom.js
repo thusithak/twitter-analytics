@@ -6,7 +6,7 @@
 
 $(document).ready(function () {
 
-
+/*
     var avatar = $(".avatar");
     avatar.each(function (i, e) {
         var profilePic = $(e).children("img").prop("src");
@@ -14,11 +14,11 @@ $(document).ready(function () {
     });
 
     $(avatar).prev().foggy({
-        blurRadius: 16, // In pixels.
+        blurRadius: 8, // In pixels.
         opacity: 1, // Falls back to a filter for IE.
         cssFilterSupport: true  // Use "-webkit-filter" where available.
     });
-
+*/
 
     var ntLatest = $('#nt-latest').newsTicker({
         row_height: 60,
