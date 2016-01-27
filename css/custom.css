@@ -39,7 +39,7 @@ h3,a{
 }
 
 .nav-tabs{
-    border-color:#607D8B;
+    border-color:#ddd;
 }
 .nav-tabs>li>a{
     -webkit-border-radius: 0;
@@ -47,7 +47,7 @@ h3,a{
     border-radius: 0;
 }
 .nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover{
-    border-color:#607D8B;
+    border-color:#ddd;
     border-bottom-color:transparent;
 }
 .nav-tabs>li>a:hover{
@@ -82,6 +82,7 @@ footer a, footer a:hover,footer .icon{
 }
 .trend-graph,.sentiment-graph{
     height: 500px;
+    border:1px solid #ddd;
 }
 
 
@@ -469,6 +470,6 @@ footer a, footer a:hover,footer .icon{
     margin-bottom: 40px;
 }
 .img-row-breaker{
-    margin-top: 40px;
-    margin-bottom: 40px;
+    margin: 5em 20%;
+    border-bottom:1px solid #16a085;
 }
