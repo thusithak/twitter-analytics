@@ -24,7 +24,7 @@ h3,a{
     font-weight:bold;
 }
 .page-header{
-    margin-top: 40px;
+    margin-top: 20px;
     margin-bottom: 10px;
     border-bottom: none;
     padding: 0px;
@@ -88,7 +88,7 @@ footer a, footer a:hover,footer .icon{
 
 .card {
     margin: 0px;
-    min-height:407px;
+    min-height:363px;
     background-color: rgba(214, 224, 226, 0.2);
     border-top-width: 0;
     border-bottom-width: 2px;
@@ -252,7 +252,7 @@ footer a, footer a:hover,footer .icon{
     text-align: center;
 }
 .card.hovercard .cardheader {
-    height: 200px;
+    height: 160px;
     background-size: cover;
     display: block;
 /*    filter: blur(15px);
@@ -470,6 +470,32 @@ footer a, footer a:hover,footer .icon{
     margin-bottom: 40px;
 }
 .img-row-breaker{
-    margin: 5em 20%;
-    border-bottom:1px solid #16a085;
+    margin: 5em auto;
+}
+.repick-btn{
+    float:right;
+    display:block;
+    font-size:16px;
+    color:#16a085;
+    padding:9px 12px;
+    -webkit-transition-property: background;
+        -moz-transition-property: background;
+        -o-transition-property: background;
+        transition-property: background;
+        -webkit-transition-duration: .5s;
+        -moz-transition-duration: .5s;
+        -o-transition-duration: .5s;
+        transition-duration: .5s;
+        -webkit-transition-timing-function: linear;
+        -moz-transition-timing-function: linear;
+        -o-transition-timing-function: linear;
+        transition-timing-function: linear;
+}
+.repick-btn:hover{
+    cursor:pointer;
+    color:#fff;
+    background: #16a085;
+}
+.repick-btn i{
+    margin-right:6px;
 }

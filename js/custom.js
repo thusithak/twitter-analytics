@@ -110,6 +110,13 @@ $(document).ready(function () {
     $(".menu-btn").outerHeight(cardHeight);
     $(".menu-btn").css("padding-top", cardHeight / 2 - 50);
 
+    $(".repick-btn").show();
+    $(".menu-btn").hide();
+    $(".repick-btn").on("click",function(){
+        console.log("asdads");
+        $(".menu-btn").click();
+    });
+
 });
 
 
