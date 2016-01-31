@@ -30,6 +30,41 @@ $(document).ready(function () {
         nextButton: $('.nt-next')
     });
 
+
+    var words1 = [{text: "Lorem", weight: 13},{text: "Ipsum", weight: 10},{text: "Dolor", weight: 9},{text: "Sit", weight: 8},{text: "Amet", weight: 6},{text: "Adipiscing", weight: 5}];
+    var words2 = [{text: "Lorem", weight: 10},{text: "Ipsum", weight: 1},{text: "Dolor", weight: 9},{text: "Sit", weight: 8},{text: "Amet", weight: 3},{text: "Adipiscing", weight: 8}];
+    var words3 = [{text: "Lorem", weight: 3},{text: "Ipsum", weight: 2},{text: "Dolor", weight: 6},{text: "Sit", weight: 8},{text: "Amet", weight: 6},{text: "Adipiscing", weight: 12}];
+
+    $('#word-cloud-1').jQCloud(words1,{
+      classPattern: null,
+      height: 100,
+      colors: ["#33CCCC","#009999","#99FFFF","#66CCCC","#339999","#006666"],
+      fontSize: {
+        from: 0.1,
+        to: 0.02
+      }
+    });
+
+    $('#word-cloud-2').jQCloud(words2,{
+      classPattern: null,
+      height: 100,
+      colors: ["#FF9900","#FF9933","#CC6600","#FF9966","#CC6633","#993300"],
+      fontSize: {
+        from: 0.1,
+        to: 0.02
+    }
+    });
+
+    $('#word-cloud-3').jQCloud(words3,{
+      classPattern: null,
+      height: 100,
+      colors: ["#CC00FF","#CC33FF","#9900CC","#CC66FF","#9933CC","#660099"],
+      fontSize: {
+        from: 0.1,
+        to: 0.02
+      }
+    });
+
     $("#candidate-selection-menu li").on("click", function () {
         var selectedCandidate = $(this).prop("id");
 
@@ -111,7 +146,9 @@ $(document).ready(function () {
     $(".menu-btn").css("padding-top", cardHeight / 2 - 50);
 
     $(".repick-btn").show();
-    $(".menu-btn").hide();
+    if($(".repick-btn").is(":visible") == true){
+       $(".menu-btn").hide();
+    }
     $(".repick-btn").on("click",function(){
         console.log("asdads");
         $(".menu-btn").click();

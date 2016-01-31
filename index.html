@@ -24,7 +24,10 @@
 
         <!-- Jquery pushy CSS -->
         <link href="libs/pushy_0.9.2/css/pushy.css" rel="stylesheet" type="text/css" />
-        
+
+        <!-- jqcloud CSS -->
+        <link href="libs/jqcloud_2.0.1/jqcloud.min.css" rel="stylesheet" type="text/css" />
+
         <!-- Theme WSO2 CSS -->
         <link href="libs/theme-wso2_1.0/css/theme-wso2.css" rel="stylesheet" type="text/css" />
 
@@ -112,7 +115,7 @@
             <!-- Breaker -->
             <div class="row">
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                    <img alt="" src="images/break.png" class="img-breaker img-responsive center-block">
+                    <div class="row-breaker"></div>
                 </div>
             </div>
             <!-- /.row -->
@@ -131,52 +134,47 @@
                     </div>
                 </div>
                 <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
-                     <h3>Now Trending...</h3>
+                     <h3>Now Trending... <span class="text-muted">(Top 2)</span></h3>
                     <div class="row">
                         <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 portfolio-item">
                             <div class="card hovercard">
-                                <div class="cardheader color1"></div>
-                                <div class="avatar">
-                                    <img alt="" src="images/candidates/dt.jpg" class="img-responsive center-block">
-                                </div>
-                                <div class="info">
-                                    <div class="title">
-                                        <a target="_blank" href="http://scripteden.com/">Donald Trump</a>
-                                    </div>
-                                    <div class="desc text-left">
-                                        <span>trump</span>
-                                        <span>donaldtrump</span>
-                                        <span>trump2016</span>
-                                        <span>makeamericagreatagain</span>
-                                        <span>realDonaldTrump</span>
-                                    </div>
-                                    <div class="desc text-left">
-                                        <a>more...</a>
+                                <div class="cardheader color1">
+                                    <div class="avatar">
+                                        <img alt="" src="images/democ.png" class="img-responsive img-party">
+                                        <img alt="" src="images/candidates/dt.jpg" class="img-responsive">
+                                        <div class="info">
+                                            <div class="title">Donald Trump</div>
+                                            <div class="desc text-left">
+                                                <span>trump</span>
+                                                <span>donaldtrump</span>
+                                                <span>trump2016</span>
+                                                <span>makeamericagreatagain</span>
+                                                <span>realDonaldTrump</span>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                                
+                                <div id="word-cloud-2"></div>
                             </div>
                         </div>
                         <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 portfolio-item">
                             <div class="card hovercard">
-                                <div class="cardheader color2"></div>
-                                <div class="avatar">
-                                    <img alt="" src="images/candidates/bs.jpg" class="img-responsive center-block">
-                                </div>
-                                <div class="info">
-                                    <div class="title">
-                                        <a target="_blank" href="http://scripteden.com/">Bernie Sanders</a>
-                                    </div>
-                                    <div class="desc text-left">
-                                        <span>bernie2016</span>
-                                        <span>feelthebern</span>
-                                        <span>berniesanders</span>
-                                        <span>FeelTheBern</span>
-                                    </div>
-                                    <div class="desc text-left">
-                                        <a>more...</a>
+                                <div class="cardheader color2">
+                                    <div class="avatar">
+                                        <img alt="" src="images/repub.png" class="img-responsive img-party">
+                                        <img alt="" src="images/candidates/bs.jpg" class="img-responsive">
+                                        <div class="info">
+                                            <div class="title">Bernie Sanders</div>
+                                            <div class="desc text-left">
+                                                <span>bernie2016</span>
+                                                <span>feelthebern</span>
+                                                <span>berniesanders</span>
+                                                <span>FeelTheBern</span>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
+                                <div id="word-cloud-3"></div>
                             </div>
                         </div>
                     </div>
@@ -187,7 +185,7 @@
             <!-- Breaker -->
             <div class="row">
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                    <div class="img-row-breaker"></div>
+                    <div class="row-breaker"></div>
                 </div>
             </div>
             <!-- /.row -->
@@ -195,7 +193,7 @@
             <!-- Projects Row -->
             <div class="row">
                 <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
-                    <h3>Tweet Ticker</h3>
+                    <h3>Tweets</h3>
                         <!-- Nav tabs -->
                         <ul class="nav nav-tabs" role="tablist">
                             <li role="presentation" class="active"><a href="#latest" aria-controls="latest" role="tab" data-toggle="tab">Latest</a></li>
@@ -239,7 +237,7 @@
                         </div>
                 </div>
                 <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
-                    <h3>Trend Analysis</h3>
+                    <h3>Community Graph</h3>
                     <div class="row">
                         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                             <div class="trend-graph"></div>
@@ -248,15 +246,7 @@
                 </div>
             </div>
             <!-- /.row -->
-            
-            <!-- Breaker -->
-            <div class="row">
-                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                    <div class="img-row-breaker"></div>
-                </div>
-            </div>
-            <!-- /.row -->
-            
+
             <!-- Projects Row -->
             <div class="row">
                 <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
@@ -268,7 +258,7 @@
                     </div>
                 </div>
                 <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-                    <h3>News</h3>
+                    <h3>Google's Top News</h3>
                     <div class="row">
                         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                             <div role="tabpanel" class="tab-pane" id="news">
@@ -328,7 +318,10 @@
         
         <!-- push menu JS -->
         <script src="libs/pushy_0.9.2/js/pushy.js"></script>
-        
+
+        <!-- jqcloud JS -->
+        <script src="libs/jqcloud_2.0.1/jqcloud.min.js"></script>
+
         <!-- Theme WSO2 JS -->
         <script src="libs/theme-wso2_1.0/js/theme-wso2.js"></script>
 

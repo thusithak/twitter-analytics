@@ -6,6 +6,7 @@
 
 
 body {
+    font-family: 'Roboto Light';
     padding-top: 0px;/* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
     overflow-x: hidden;
     height: 100%;
@@ -20,16 +21,25 @@ body {
 .no-overflow{
     overflow: hidden;
 }
+h3{
+    padding: 10px 0px;
+    font-family: 'Roboto Black';
+}
+h3 .text-muted{
+    font-family: 'Roboto Light';
+}
 h3,a{
-    font-weight:bold;
+    font-weight:normal;
 }
 .page-header{
+    font-family: 'Roboto Black';
     margin-top: 20px;
     margin-bottom: 10px;
     border-bottom: none;
     padding: 0px;
 }
 .page-sub-header{
+
     font-size: 24px;
     font-weight: 400;
     margin-top: 0px;
@@ -88,7 +98,7 @@ footer a, footer a:hover,footer .icon{
 
 .card {
     margin: 0px;
-    min-height:363px;
+    /*min-height:363px;*/
     background-color: rgba(214, 224, 226, 0.2);
     border-top-width: 0;
     border-bottom-width: 2px;
@@ -245,40 +255,59 @@ footer a, footer a:hover,footer .icon{
     box-sizing: border-box;
 }
 .card.hovercard {
-    background: #f7f7f7;
     position: relative;
     padding-top: 0;
     overflow: hidden;
     text-align: center;
+    /*border:1px solid #e2e2e2;*/
+    background:#fff;
 }
 .card.hovercard .cardheader {
-    height: 160px;
+    height: 170px;
     background-size: cover;
     display: block;
 /*    filter: blur(15px);
     -webkit-filter: blur(15px);*/
 }
 .card.hovercard .avatar {
-    position: relative;
+    padding:10px;
+    /*position: relative;
     top: -150px;
-    margin-bottom: -140px;
+    margin-bottom: -140px;*/
 }
 .card.hovercard .avatar img {
-    max-height: 200px;
+    float:left;
+    max-height: 150px;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     border-radius: 50%;
-    border: 5px solid rgba(255,255,255,0.2);
+    border: 5px solid rgba(255,255,255,.4);
+}
+.card.hovercard .avatar img.img-party{
+    position:relative;
+    top:0px;
+    left:48px;
+    margin-left:-48px;
+    max-height: 48px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    border: 0px;
+    background-color:rgba(255,255,255,.6);
 }
 .card.hovercard .info{
-    padding: 1em;
+    width:55%;
+    padding-left:2%;
+    float:left;
 }
 .card.hovercard .info .title {
-    margin-bottom: 16px;
+    margin-bottom: 10px;
+    margin-top: 10px;
     font-size: 24px;
+    font-weight:bold;
     line-height: 1;
-    color: #262626;
-    vertical-align: middle;
+    color: #fff;
+    text-align:left;
 }
 
 .card.hovercard .info .desc {
@@ -290,9 +319,10 @@ footer a, footer a:hover,footer .icon{
     display: inline-block;
     padding: 0px 6px;
     margin-right: 3px;
-    background: #CFD8DC;
+    background: #333;
     margin-bottom: 5px;
     color: #333;
+    background-color:rgba(255,255,255,.4);
 }
 .card.hovercard .info .desc a{
     display: inline-block;
@@ -303,7 +333,7 @@ footer a, footer a:hover,footer .icon{
 .card.hovercard .info .desc span::before{
     content: "#";
     margin: 0px;
-    background: #CFD8DC;
+    background-color:rgba(255,255,255,0);
     color: #333;
     margin-right: 2px;
 }
@@ -472,24 +502,28 @@ footer a, footer a:hover,footer .icon{
 .img-row-breaker{
     margin: 5em auto;
 }
+.row-breaker{
+    margin: 2em 30%;
+    border-bottom:1px solid #e2e2e2;
+}
 .repick-btn{
     float:right;
     display:block;
     font-size:16px;
     color:#16a085;
-    padding:9px 12px;
+    padding:14px 12px;
     -webkit-transition-property: background;
-        -moz-transition-property: background;
-        -o-transition-property: background;
-        transition-property: background;
-        -webkit-transition-duration: .5s;
-        -moz-transition-duration: .5s;
-        -o-transition-duration: .5s;
-        transition-duration: .5s;
-        -webkit-transition-timing-function: linear;
-        -moz-transition-timing-function: linear;
-        -o-transition-timing-function: linear;
-        transition-timing-function: linear;
+    -moz-transition-property: background;
+    -o-transition-property: background;
+    transition-property: background;
+    -webkit-transition-duration: .5s;
+    -moz-transition-duration: .5s;
+    -o-transition-duration: .5s;
+    transition-duration: .5s;
+    -webkit-transition-timing-function: linear;
+    -moz-transition-timing-function: linear;
+    -o-transition-timing-function: linear;
+    transition-timing-function: linear;
 }
 .repick-btn:hover{
     cursor:pointer;
@@ -498,4 +532,8 @@ footer a, footer a:hover,footer .icon{
 }
 .repick-btn i{
     margin-right:6px;
+}
+
+.community-graph-legend{
+    
 }
