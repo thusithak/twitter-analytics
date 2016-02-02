@@ -371,28 +371,21 @@ footer a, footer a:hover,footer .icon{
 .nt-container > i:hover {
     color: #999;
 }
-.nt-container .ft,.nt-container .rt, .nt-container li a{
+.nt-container .ft,.nt-container .rt, .nt-container .user{
     font-family: "Roboto Medium";
     padding-right:8px;
 }
-
 .nt-container .ft,.nt-container .ft i{
     color: #dd2e44;
     margin: 0px;
-    -webkit-transition: all 0.1s ease-in-out;
-    -moz-transition: all 0.1s ease-in-out;
-    -ms-transition: all 0.1s ease-in-out;
-    -o-transition: all 0.1s ease-in-out;
-    transition: all 0.1s ease-in-out;
 }
 .nt-container .rt,.nt-container .rt i{
     color: #5c913b;
     margin: 0px;
-    -webkit-transition: all 0.1s ease-in-out;
-    -moz-transition: all 0.1s ease-in-out;
-    -ms-transition: all 0.1s ease-in-out;
-    -o-transition: all 0.1s ease-in-out;
-    transition: all 0.1s ease-in-out;
+}
+.nt-container .user,.nt-container .user i{
+    color: #4aa3df;
+    margin: 0px;
 }
 #nt-latest ul,#nt-popular ul,#nt-news ul{
     padding: 0px;
